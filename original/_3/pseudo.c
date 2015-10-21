@@ -39,7 +39,6 @@ loop(){
 				delay_milidetik(100);
 				v4=baca_input(A0);
 				P4=hitung_daya4(v4);
-				
 				if ( !( (v4<5) && (v4>=0.4) ) ){
 					tampilkan_pesan_its_bad();
 					matikan_semua_relay();
