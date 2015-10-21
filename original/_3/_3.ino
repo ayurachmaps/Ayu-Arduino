@@ -2,8 +2,10 @@
 #define RELAY5 8
 #define RELAY4 7
 #define RELAY3 6
+
 #include<LiquidCrystal.h>
 LiquidCrystal lcd(12,11,5,4,3,2);
+
 float P1;
 float P2;
 float P3;
@@ -22,22 +24,24 @@ void setup() {
 
 void loop() {
   digitalWrite(RELAY6,HIGH);
+  
   int sensorValue = analogRead(A0);
-  float v1 = sensorValue * (5.0 / 1023.0);
+  float v1 = sensorValue * (0.005);
+  
   if (v1>=5 || v1<0.4) {
     relay5();
   }
   else {
-  P1=(4.699* log (v1))-43.12;
-  lcd.setCursor(0,0);
-  lcd.print("Tegangan=");
-  lcd.setCursor(0,1);
-  lcd.print("Daya=");
-  lcd.setCursor(10,0);
-  lcd.print(v1);
-  lcd.setCursor(6,1);
-  lcd.print(P1);
-  delay(500);
+    P1=(4.699* log (v1))-43.12;
+    lcd.setCursor(0,0);
+    lcd.print("Tegangan=");
+    lcd.setCursor(0,1);
+    lcd.print("Daya=");
+    lcd.setCursor(10,0);
+    lcd.print(v1);
+    lcd.setCursor(6,1);
+    lcd.print(P1);
+    delay(500);
   }
 }
 
