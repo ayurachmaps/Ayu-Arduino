@@ -1,0 +1,11 @@
+[user]
+	name = mekatronik-achmadi
+	email = mekatronik.achmadi@gmail.com
+[gui]
+	editor = geany
+[color]
+	ui = auto
+[http]
+	proxy = http://achmadi10%40mhs.ep.its.ac.id:foreveralone@proxy.its.ac.id:8080
+[https]
+	proxy = https://achmadi10%40mhs.ep.its.ac.id:foreveralone@proxy.its.ac.id:8080
